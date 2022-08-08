@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROFILE_NAME=DEFAULT
-BACKUP_NAME=Full_Backup
+BACKUP_NAME="Full_Backup"
 COMPARTMENT_ID='ocid1.tenancy.oc1**********************************************' # Get this from your Oracle Profile
 TMP_BACKUP_NAME=$(date +%Y-%m-%d_%H-%M-%S)
 
