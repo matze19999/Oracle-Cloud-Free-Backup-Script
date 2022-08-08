@@ -5,6 +5,13 @@ BACKUP_NAME="Full_Backup"
 COMPARTMENT_ID='ocid1.tenancy.oc1**********************************************' # Get this from your Oracle Profile
 TMP_BACKUP_NAME=$(date +%Y-%m-%d_%H-%M-%S)
 
+which jq >/dev/null
+if [ $? -eq 1 ]
+then
+        echo "Please install jq with 'sudo apt install jq -y'"
+        exit 1
+fi
+
 echo "Running at ${TMP_BACKUP_NAME}."
 echo "Getting previous backup..."
 
